@@ -266,6 +266,10 @@ ul .list-default {
     flex-flow: row wrap;
 }
 
+.row-same-height > [class*="col-md-"] {
+    margin-right: -1px;
+}
+
 .text-bold {
     font-weight: bold;
 }
