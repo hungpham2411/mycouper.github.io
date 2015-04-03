@@ -1,0 +1,138 @@
+.divider-vertical {
+    height: 100%;
+    border-left: 1px solid white;
+}
+
+.footer {
+    background-color: #E5E2DC;
+    padding: 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+.main {
+    margin-bottom: 40px;
+}
+
+.main-container {
+    margin-top: 50px;
+}
+
+.main-slider .owl-item .item {
+    height: calc(100vh - 50px);
+
+    position: relative;
+}
+
+.main-slider .slider-background {
+    height: 100%;
+}
+
+.main-slider .slider-caption {
+    height: 100%;
+
+    color: white;
+    position: absolute;
+    text-shadow: 1px 1px 1px black;
+    top: 0;
+    left: 0;
+}
+
+.map-holder {
+    width: 100%;
+    height: 400px;
+}
+
+.mgb1 {
+    margin-bottom: 10px;
+}
+
+.mgb2 {
+    margin-bottom: 20px;
+}
+
+.mgb3 {
+    margin-bottom: 30px;
+}
+
+.mgb4 {
+    margin-bottom: 40px;
+}
+
+.navbar-collapse > .nav.navbar-nav:not(:last-child) {
+    border-right: 1px solid white;
+}
+
+.navbar-nav > li > a {
+    border-radius: 5px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.owl-carousel .owl-controls .owl-buttons > div {
+    background: none;
+    border-radius: 0;
+    position: absolute;
+    top: calc(50% - 16px);
+    z-index: 100;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-next {
+    right: 0;
+}
+
+.owl-carousel .owl-controls .owl-buttons .owl-prev {
+    left: 0;
+}
+
+.owl-carousel .owl-controls {
+    margin-top: 0;
+}
+
+.owl-carousel .owl-controls .owl-pagination {
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.owl-carousel .owl-controls .owl-page span {
+    background: white;
+    opacity: 1;
+}
+
+.owl-carousel .owl-controls .owl-page.active span {
+    background: #ff6400;
+}
+
+.pdt2 {
+    padding-top: 20px;
+}
+
+.text-highlight {
+    color: #ff6400;
+}
+
+@media screen and (min-width: 768px) {
+
+    .feature .row-same-height [class*="col-md-"]:not(:last-child) {
+        border-right: 1px solid black;
+    }
+
+    .main-slider .slider-caption {
+        width: 50%;
+
+        left: 50%;
+    }
+
+    .navbar-custom {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
