@@ -9,7 +9,9 @@
 }
 
 .logo {
-    height: 50px;
+    height: 80px;
+
+    padding: 10px;
 }
 
 .main {
@@ -17,11 +19,11 @@
 }
 
 .main-container {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 
 .main-slider .owl-item .item {
-    height: calc(100vh - 50px);
+    height: 60vw;
 
     position: relative;
 }
@@ -31,18 +33,19 @@
 }
 
 .main-slider .slider-caption {
+    width: 60%;
     height: 100%;
 
     color: white;
     position: absolute;
     text-shadow: 1px 1px 1px black;
     top: 0;
-    left: 0;
+    left: 40%;
 }
 
 .map-holder {
     width: 100%;
-    height: 400px;
+    height: 300px;
 }
 
 .mgb1 {
@@ -61,16 +64,19 @@
     margin-bottom: 40px;
 }
 
-.navbar-collapse > .nav.navbar-nav:not(:last-child) {
-    border-right: 1px solid white;
+.navbar-nav > li > a {
+    border-bottom: 3px solid transparent;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: border-color 0.3s, color 0.3s;
 }
 
-.navbar-nav > li > a {
-    border-radius: 5px;
-    font-weight: bold;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    text-transform: uppercase;
+.navbar-nav > li > a:hover {
+    border-bottom: 3px solid #ff8000;
+}
+
+.navbar-nav > .active > a {
+    border-color: #ff8000;
 }
 
 .owl-carousel .owl-controls .owl-buttons > div {
@@ -113,6 +119,19 @@
     padding-top: 20px;
 }
 
+.slider-caption .btn {
+    font-size: 10px;
+    padding: 3px 6px;
+}
+
+.slider-caption-title {
+    font-size: 12px;
+}
+
+.slider-caption-description {
+    font-size: 8px;
+}
+
 .text-highlight {
     color: #ff6400;
 }
@@ -123,10 +142,18 @@
         border-right: 1px solid black;
     }
 
+    .main-slider .owl-item .item {
+        height: calc(100vh - 80px);
+    }
+
     .main-slider .slider-caption {
         width: 50%;
 
         left: 50%;
+    }
+
+    .navbar-collapse > .nav.navbar-nav:not(:last-child) {
+        border-right: 1px solid white;
     }
 
     .navbar-custom {
@@ -134,5 +161,18 @@
         flex-flow: row wrap;
         align-items: center;
         justify-content: space-between;
+    }
+
+    .slider-caption .btn {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+
+    .slider-caption-title {
+        font-size: 32px;
+    }
+
+    .slider-caption-description {
+        font-size: initial;
     }
 }
