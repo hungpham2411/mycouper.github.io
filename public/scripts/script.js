@@ -35,18 +35,6 @@ function addEventListeners() {
             console.log(e);
         }
 
-        try {
-            $(".partner-slider .owl-carousel").owlCarousel({
-                autoPlay: true,
-                items: 12,
-                navigation: true,
-                navigationText: ["<img src='public/libs/owlcarousel/arrow-left.png'>", "<img src='public/libs/owlcarousel/arrow-right.png'>"],
-                pagination: false
-            });
-        } catch (e) {
-            console.log(e);
-        }
-
         var map = document.querySelector(".map-holder");
         if (map !== null) {
             var xhr = new XMLHttpRequest();

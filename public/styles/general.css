@@ -80,6 +80,13 @@ ul .list-default {
     justify-content: flex-end;
 }
 
+.flex-cnfsfe {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
 .flex-rwfsc {
     display: flex;
     flex-flow: row wrap;
@@ -266,15 +273,6 @@ ul .list-default {
     flex: 12 1 auto;
 }
 
-.row-same-height {
-    display: block;
-    flex-flow: row wrap;
-}
-
-.row-same-height > [class*="col-md-"] {
-    margin-right: -1px;
-}
-
 .text-bold {
     font-weight: bold;
 }
@@ -288,13 +286,29 @@ ul .list-default {
 }
 
 @media screen and (min-width: 992px) {
+    .hard-height-20 {
+        height: 200px;
+    }
+
+    .hard-height-32 {
+        height: 320px;
+    }
+
+    .hard-height-40 {
+        height: 400px;
+    }
+
     .row-same-height {
         display: flex;
     }
-}
 
-@media screen and (min-width: 1200px) {
-
+    /*
+    If class .row-same-height sets flex-wrap to "wrap" then child of row will be wrap, this error only occurs to google chrome
+    Below is fix
+    .row-same-height > [class*="col-md-"] {
+            margin-right: -1px;
+        }
+    */
 }
 
 /*<!-- block grid -->*/
@@ -412,7 +426,7 @@ ul .list-default {
         clear: none; }
     .small-block-grid-12 > li:nth-of-type(12n+1) {
         clear: both; } }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 992px) {
     [class*="medium-block-grid-"] > li {
         float: left;
     }
@@ -512,7 +526,7 @@ ul .list-default {
         clear: none; }
     .medium-block-grid-12 > li:nth-of-type(12n+1) {
         clear: both; } }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
     [class*="large-block-grid-"] > li {
         float: left;
     }

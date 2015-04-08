@@ -49,8 +49,22 @@
 
                                 <div id="bs-navbar-collapse-1" class="collapse navbar-collapse navbar-right">
                                     <ul class="nav navbar-nav">
-                                        <li class="active"><a href="#">Sản phẩm</a></li>
-                                        <li><a href="#">Blog</a></li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">myCouper</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Thẻ thành viên</a></li>
+                                                <li><a href="#">Thẻ tích điểm</a></li>
+                                                <li><a href="#">Phiếu điện tử</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropdown">
+                                            <a class="dropdown-toggle" data-toggle="dropdown" role="button" href="#">Khách hàng</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Người dùng</a></li>
+                                                <li><a href="#">Doanh nghiệp</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="active"><a href="#">Blog</a></li>
                                         <li><a href="#">Liên hệ</a></li>
                                     </ul>
 
@@ -68,7 +82,7 @@
 
             <main class="main">
                 <div class="main-container">
-                    <div class="main-slider mgb2">
+                    <div class="main-slider">
                         <div class="owl-carousel owl-theme">
                             <div class="item">
                                 <div class="slider-background">
@@ -116,7 +130,7 @@
                             </div>
 
                             <div class="row row-same-height mgb4">
-                                <div class="col-md-4 mgb2">
+                                <div class="col-md-4">
                                     <div class="text-center">
                                         <img class="icon-x8" src="public/images/icons/icon-lost-card.png" alt=""/>
                                         <h4 class="text-bold text-uppercase">KHÔNG LO QUÊN THẺ</h4>
@@ -124,7 +138,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4 mgb2">
+                                <div class="col-md-4">
                                     <div class="text-center">
                                         <img class="icon-x8" src="public/images/icons/gift_card.png" alt=""/>
                                         <h4 class="text-bold text-uppercase">TÍCH ĐIỂM MỌI NƠI, ĐỔI QUÀ MỌI LÚC</h4>
@@ -156,7 +170,7 @@
                             </div>
 
                             <div class="row row-same-height mgb4">
-                                <div class="col-md-4 mgb2">
+                                <div class="col-md-4">
                                     <div class="text-center">
                                         <img class="icon-x8" src="public/images/icons/revenue-icon.png" alt=""/>
                                         <h4 class="text-bold text-uppercase">GIA TĂNG DOANH THU</h4>
@@ -164,7 +178,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4 mgb2">
+                                <div class="col-md-4">
                                     <div class="text-center">
                                         <img class="icon-x8" src="public/images/icons/mobile_marketing.png" alt=""/>
                                         <h4 class="text-bold text-uppercase">KÊNH MOBILE MARKETING HIỆU QUẢ</h4>
@@ -181,61 +195,86 @@
                                 </div>
                             </div>
 
-                            <div class="row row-same-height">
-                                <div class="col-md-8 mgb2">
-                                    <h4 class="mgb2 text-bold text-center text-uppercase">Hệ thống đối tác trong myCouper</h4>
-                                    <div class="partner-slider">
-                                        <div class="owl-carousel owl-theme">
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                            <div class="item">
-                                                <img class="icon-x5" src="public/images/logo.png" alt=""/>
-                                            </div>
-                                        </div>
+                            <div>
+                                <h4 class="mgb2 text-bold text-center text-uppercase">Hợp tác với myCouper</h4>
+                                <div class="text-center">
+                                    <a class="btn btn-default text-bold text-uppercase" href="#">ĐĂNG KÝ</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="feature pdb5">
+                        <div class="container">
+                            <div class="text-center mgb4">
+                                <img src="public/images/logo.png" alt=""/>
+                                <h2 class="text-highlight">Hệ thống đối tác trong myCouper</h2>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="flex-rwcc">
+                                        <ul class="partner-wrapper">
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
 
                                 <div class="col-md-4">
-                                    <h4 class="mgb2 text-bold text-center text-uppercase">Hợp tác với myCouper</h4>
-                                    <div class="text-center">
-                                        <a class="btn btn-default text-bold text-uppercase" href="#">ĐĂNG KÝ</a>
+                                    <div class="flex-rwcc">
+                                        <ul class="partner-wrapper">
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="flex-rwcc">
+                                        <ul class="partner-wrapper">
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+
+                                            <li class="partner-item">
+                                                <img class="icon-x8" src="public/images/logo.png" alt=""/>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +289,7 @@
                             </div>
 
                             <div class="row row-same-height mgb4">
-                                <div class="col-md-6 mgb2">
+                                <div class="col-md-6">
                                     <h4 class="text-bold">Người dùng</h4>
                                     <p class="text-italic">Bạn có smartphone, bạn là thành viên của nhiều nhà hàng, cửa hàng ...</p>
                                     <p>
@@ -292,11 +331,12 @@
 
                         <form class="form-horizontal mgb4" action="" method="post">
                             <p class="text-bold">Bạn muốn hợp tác, hỏi, phản hồi, góp ý, bình luận về ứng dụng, dịch vụ của chúng tôi ?</p>
-                            <div class="row row-same-height">
-                                <div class="col-md-5">
+                            <div class="mgb2 row row-same-height">
+                                <div class="col-md-3 hard-height-32">
                                     <p class="text-italic">Vui lòng gửi thông tin cho chúng tôi :</p>
-                                    <br/>
+                                </div>
 
+                                <div class="col-md-6 hard-height-32">
                                     <div class="form-group">
                                         <label class="col-sm-4">Tên :</label>
                                         <div class="col-sm-8">
@@ -338,16 +378,18 @@
                                             <textarea id="custommer-content" class="form-control" name="custommerContent"></textarea>
                                         </div>
                                     </div>
-
-                                    <div class="form-group">
-                                        <div class="col-sm-8 col-sm-offset-4">
-                                            <input class="btn btn-default btn-lg" type="submit" value="GỬI"/>
-                                        </div>
-                                    </div>
                                 </div>
 
-                                <div class="col-md-5 col-md-offset-2">
-                                    <div class="mgb4">
+                                <div class="col-md-3 hard-height-32">
+                                    <div class="fh flex-cncfe">
+                                        <input class="btn btn-default btn-lg" type="submit" value="GỬI"/>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row row-same-height">
+                                <div class="col-md-4 hard-height-20">
+                                    <div class=" fh flex-cnfsfe">
                                         <h4 class="mgb2 text-bold text-uppercase">THEO CHÚNG TÔI ONLINE</h4>
                                         <div>
                                             <a href="facebook.com"><img class="icon-x4" src="public/images/icons/fb.png" alt=""/></a>
@@ -357,14 +399,24 @@
                                             <a href="youtube.com"><img class="icon-x4" src="public/images/icons/youtube.png" alt=""/></a>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div>
+                                <div class="col-md-4 hard-height-20">
+                                    <div class="fh flex-cnfsfe">
                                         <h4 class="mgb2 text-bold text-uppercase">LIÊN HỆ</h4>
-                                        <p>+ Điện thoại : +84902225226</p>
-                                        <p>+ Email : support@mycouper.com</p>
+                                        <div>
+                                            <p>Công ty cổ phần công nghệ myCouper</p>
+                                            <p>+ Địa chỉ :</p>
+                                            <p>+ Điện thoại : +84902225226</p>
+                                            <p>+ Email : support@mycouper.com</p>
+                                        </div>
                                     </div>
+                                </div>
 
-                                    <div class="map-holder"></div>
+                                <div class="col-md-4 hard-height-20">
+                                    <div class="fh flex-cnfsfe">
+                                        <div class="map-holder"></div>
+                                    </div>
                                 </div>
                             </div>
                         </form>
