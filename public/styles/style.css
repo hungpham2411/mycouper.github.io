@@ -1,5 +1,6 @@
 .ani-slide-up {
-    animation: slideUp 0.5s
+    -webkit-animation: slideUp 0.5s;
+    animation: slideUp 0.5s;
 }
 
 .divider-vertical {
@@ -9,7 +10,6 @@
 
 .feature {
     border-bottom: 1px solid #ddd;
-    padding-top: 100px;
 }
 
 .feature:nth-child(even) {
@@ -72,7 +72,6 @@
 }
 
 .navbar-nav > li > a {
-    text-transform: uppercase;
     transition: background-color 0.3s;
 }
 
@@ -134,6 +133,10 @@
     padding-top: 20px;
 }
 
+.pdt10 {
+    padding-top: 100px;
+}
+
 .slider-caption .btn {
     font-size: 10px;
     padding: 3px 6px;
@@ -155,6 +158,10 @@
 
     .dropdown-menu {
         border-radius: 0;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
     }
 
     .feature .row-same-height [class*="col-md-"]:not(:first-child) {
@@ -201,6 +208,16 @@
 
     .slider-caption-description {
         font-size: initial;
+    }
+}
+
+@-webkit-keyframes slideUp {
+    from {
+        margin-top: 20px;
+    }
+
+    to {
+        margin-top: 0px;
     }
 }
 
