@@ -1,3 +1,7 @@
+.ani-slide-up {
+    animation: slideUp 0.5s
+}
+
 .divider-vertical {
     height: 100%;
     border-left: 1px solid white;
@@ -149,6 +153,10 @@
 
 @media screen and (min-width: 992px) {
 
+    .dropdown-menu {
+        border-radius: 0;
+    }
+
     .feature .row-same-height [class*="col-md-"]:not(:first-child) {
         border-left: 1px solid #ddd;
     }
@@ -193,5 +201,15 @@
 
     .slider-caption-description {
         font-size: initial;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        margin-top: 20px;
+    }
+
+    to {
+        margin-top: 0px;
     }
 }

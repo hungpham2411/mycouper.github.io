@@ -47,6 +47,16 @@ function addEventListeners() {
             xhr.open("get", "public/php/get_map_coordinates.php", true);
             xhr.send();
         }
+
+        var dropdown = document.querySelectorAll(".dropdown");
+        console.log(dropdown.length);
+        if (dropdown.length !== 0) {
+            for (var i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function () {
+                    this.querySelector(".dropdown-menu").classList.add("ani-slide-up");
+                });
+            }
+        }
     });
 }
 
