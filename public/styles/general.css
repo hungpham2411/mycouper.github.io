@@ -310,8 +310,8 @@ ul .list-default {
     Below is fix
 
     .row-same-height > [class*="col-md-"] {
-            margin-right: -1px;
-        }
+        margin-right: -1px;
+    }
 
     We recommend you don't set flex-wrap to "wrap"
     */
