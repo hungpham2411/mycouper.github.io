@@ -303,11 +303,17 @@ ul .list-default {
     }
 
     /*
-    If class .row-same-height sets flex-wrap to "wrap" then child of row will be wrap, this error only occurs to google chrome
+    If class .row-same-height sets flex-wrap to "wrap"
+    then cols of row will be wrap when col width is set by percent and it's an infinite decimal',
+    ex: col-md-3 in bootstrap width is 33.333333%
+    This error only occurs to google chrome
     Below is fix
+
     .row-same-height > [class*="col-md-"] {
             margin-right: -1px;
         }
+
+    We recommend you don't set flex-wrap to "wrap"
     */
 }
 
