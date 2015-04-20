@@ -1,0 +1,13 @@
+.c-message{margin-bottom: 30px;}
+
+#wp-calendar tbody td.calendarDateEmpty {
+	background-color: #fff;
+}
+#wp-calendar tbody td.calendarToday,#wp-calendar tbody td.calendarToday:hover {
+	background-color: #ff4800;
+	color:#fff;
+}
+#wp-calendar tbody td.calendarDateLinked:hover {
+	background-color: #ccc;
+
+}
