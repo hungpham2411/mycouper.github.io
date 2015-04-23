@@ -1,22 +1,22 @@
 <?php
-
 require_once("libraries/queries.php");
 
-if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
-{
-	$meta_title = $options['op_MetaTitle'];
-	$meta_description = $options['op_MetaDescription'];
-	$meta_keywords = $options['op_MetaKeywords'];
-}elseif(isset($_GET['flag']) && $_GET['flag'] == 3)
-{echo $_GET['idBlog'];
-	$blog_details = $pdo->query("SELECT * FROM blog INNER JOIN blog_categories ON blog.bl_Category=blog_categories.bc_Id WHERE bl_Id='".$_GET['idBlog']."' AND bl_IsShow=1");
-	$blog_details = $blog_details->fetch();
-	
-	$meta_title = $blog_details['bl_MetaTitle'];
-	$meta_description = $blog_details['bl_MetaDescription'];
-	$meta_keywords = $blog_details['bl_MetaKeywords'];
-}
+if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
+    $meta_title = $options['op_MetaTitle'];
+    $meta_description = $options['op_MetaDescription'];
+    $meta_keywords = $options['op_MetaKeywords'];
+} elseif (isset($_GET['flag']) && $_GET['flag'] == 3) {
+    echo $_GET['idBlog'];
+    $blog_details = $pdo->query("SELECT * FROM blog INNER JOIN blog_categories ON blog.bl_Category=blog_categories.bc_Id WHERE bl_Id='" . $_GET['idBlog'] . "' AND bl_IsShow=1");
+    $blog_details = $blog_details->fetch();
 
+    $meta_title = $blog_details['bl_MetaTitle'];
+    $meta_description = $blog_details['bl_MetaDescription'];
+    $meta_keywords = $blog_details['bl_MetaKeywords'];
+}
+if ($_POST["contactform"]) {
+    echo 'form is submit!';
+}
 ?>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="en-gb">
@@ -84,7 +84,11 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
             <!-- Top of the page -->
             <div id="top"></div>
             <!-- Top bar -->
-            <div class="top-bar tb-large<?php if(isset($_GET['flag']) && $_GET['flag'] == 1){echo " tb-transp";} ?>">
+            <div class="top-bar tb-large<?php
+            if (isset($_GET['flag']) && $_GET['flag'] == 1) {
+                echo " tb-transp";
+            }
+            ?>">
                 <div class="row">
                     <div class="twelve col">
 
@@ -130,7 +134,7 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
                                         <li><a href="#" title="Doanh nghiệp">Doanh nghiệp</a></li>
                                     </ul>
                                 </li>
-                                <li class="item-196"><a href="<?php echo PATH."/blog.html"; ?>" title="Blog">Blog</a></li>
+                                <li class="item-196"><a href="<?php echo PATH . "/blog.html"; ?>" title="Blog">Blog</a></li>
                                 <li class="item-197"><a class="scrollto" href="#contact" title="Liên hệ">Liên hệ</a></li>
                                 <li class="item-211"><a href="#" title="Đăng ký">Đăng ký</a></li>
                                 <li class="item-211"><a href="#" title="Đăng nhập">Đăng nhập</a></li>
@@ -146,14 +150,11 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
             </div>
         </header>
 
-		<?php
-		
-            foreach ($noidungtrang as $noidung) 
-			{
-                include("$noidung");
-            }
-		
-		?>
+        <?php
+        foreach ($noidungtrang as $noidung) {
+            include("$noidung");
+        }
+        ?>
 
         <section  id="contact"  class="contact">
             <!-- Title -->
@@ -168,25 +169,25 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
                     <form method="post" action="" enctype="multipart/form-data" name="contactform" id="contactform" class="form c-form">
                         <fieldset>
                             <input name="name" type="text" id="name" placeholder="Họ và tên" />
-							<input name="address" type="text" id="address" placeholder="Địa chỉ" />
+                            <input name="address" type="text" id="address" placeholder="Địa chỉ" />
                             <input name="email" type="email" id="email" placeholder="E-mail" />
                             <input name="phone" type="tel" id="phone" placeholder="Điện thoại">
                             <input name="title" type="text" id="title" placeholder="Tiêu đề">
-                            <textarea name="message" id="comments" placeholder="Nội dung"></textarea>
-                           <div style="clear:both;"></div>
+                            <textarea name="message" id="message" placeholder="Nội dung"></textarea>
+                            <div style="clear:both;"></div>
                             <div id="dynamic_recaptcha_1"></div>
                             <div style="clear:both;margin-bottom: 10px;"></div>
-							<input type="hidden" name="option" value="com_cthcontact">
-							<input type="hidden" name="task" value="contact.sendemail">
-							<input type="hidden" name="tmpl" value="component">
-						<!--	index.php?option=com_cthcontact&amp;task=contact.sendemail&amp;tmpl=component -->
-							<input type="hidden" name="receiveEmail" value="<?php echo $options['op_Email'] ?>">
+                            <input type="hidden" name="option" value="com_cthcontact">
+                            <input type="hidden" name="task" value="contact.sendemail">
+                            <input type="hidden" name="tmpl" value="component">
+                            <!--	index.php?option=com_cthcontact&amp;task=contact.sendemail&amp;tmpl=component -->
+                            <input type="hidden" name="receiveEmail" value="<?php echo $options['op_Email'] ?>">
                             <input type="hidden" name="thanks" value="Thanks for contacting with us!">
                             <input type="hidden" name="subject" value="Get support">
-                            <input type="hidden" name="960f7535ebc239e7e1f97eac42f80b6c" value="1" />	
-								
+                            <input type="hidden" name="960f7535ebc239e7e1f97eac42f80b6c" value="1" />
+
                             <input type="submit" class="submit btn outline" id="submit" value="Gửi liên hệ" />
-						</fieldset>
+                        </fieldset>
                     </form>
                 </div>
 
@@ -200,11 +201,11 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
 
                     <h5>Chi tiết liên hệ</h5>
                     <address class="c-details">
-						<a href="<?php echo PATH ?>" title="<?php echo $options['op_Name'] ?>">
+                        <a href="<?php echo PATH ?>" title="<?php echo $options['op_Name'] ?>">
                             <i class="fa fa-home"></i>
                             <span><?php echo $options['op_Name'] ?></span>
                         </a>
-						<br />
+                        <br />
                         <a title="<?php echo $options['op_Address'] ?>" href="<?php echo $options['op_Map'] ?>" target="new">
                             <i class="fa fa-map-marker"></i>
                             <span><?php echo $options['op_Address'] ?></span>
@@ -215,7 +216,7 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
                             <span><?php echo $options['op_Email'] ?></span>
                         </a>
                         <br>
-                        <a title="<?php echo $options['op_Phone'] ?>" href="tel:<?php echo str_replace(' ','',$options['op_Phone']); ?>">
+                        <a title="<?php echo $options['op_Phone'] ?>" href="tel:<?php echo str_replace(' ', '', $options['op_Phone']); ?>">
                             <i class="fa fa-phone"></i>
                             <span><?php echo $options['op_Phone']; ?></span>
                         </a>
@@ -264,20 +265,20 @@ if(isset($_GET['flag'])  && ($_GET['flag'] == 1 || $_GET['flag'] == 2))
         <script src="<?php echo PATH ?>/public/scripts/main.js"></script>
         <script src="<?php echo PATH ?>/public/scripts/retina.min.js"></script>
         <script>
-                (function (i, s, o, g, r, a, m) {
-                    i['GoogleAnalyticsObject'] = r;
-                    i[r] = i[r] || function () {
-                        (i[r].q = i[r].q || []).push(arguments)
-                    }, i[r].l = 1 * new Date();
-                    a = s.createElement(o),
-                            m = s.getElementsByTagName(o)[0];
-                    a.async = 1;
-                    a.src = g;
-                    m.parentNode.insertBefore(a, m)
-                })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                        m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-                ga('create', 'UA-55726154-1', 'auto');
-                ga('send', 'pageview');
+            ga('create', 'UA-55726154-1', 'auto');
+            ga('send', 'pageview');
 
         </script>
     </body>

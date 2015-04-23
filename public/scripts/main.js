@@ -181,9 +181,7 @@
         }
         ;
 
-        $('#submit').on('click', function (event) {
-            event.preventDefault();
-
+        $('#contactform').on('submit', function (event) {
             //name
             var name = $("#name").val();
             if (name == "") {
@@ -193,7 +191,7 @@
                 return false;
             }
 
-			//address
+            //address
             var address = $("#address").val();
             if (address == "") {
 
@@ -201,7 +199,7 @@
                 $("#address").focus();
                 return false;
             }
-			
+
             //email (check if entered anything)
             var email = $("#email").val();
             //email (check if entered anything)
@@ -221,18 +219,18 @@
                 }
             }
 
-			//phone
-			var phone = $("#phone").val();
-			var phoneValid = /^[0-9 +]+$/;
-			var testPhone = phoneValid.test(phone);
-			if(testPhone == false){
-				
+            //phone
+            var phone = $("#phone").val();
+            var phoneValid = /^[0-9 +]+$/;
+            var testPhone = phoneValid.test(phone);
+            if (testPhone == false) {
+
                 $('#message').text("Phone is not valid.").slideDown(300);
                 $("#phone").focus();
                 return false;
-			}
-			
-			//title
+            }
+
+            //title
             var title = $("#title").val();
             if (title == "") {
 
@@ -240,7 +238,7 @@
                 $("#title").focus();
                 return false;
             }
-			
+
             // comments
             var comments = $("#comments").val();
 
@@ -250,37 +248,40 @@
                 return false;
             }
 
+            return true;
 
-            var action = $('#contactform').attr('action');
+            /*
+             var action = $('#contactform').attr('action');
 
-            $('#message').slideUp(300, function () {
-                $('#message').hide();
-                $('#submit')
-                        .after('<img src="public/images/loader.gif" class="loader">')
-                        .attr('disabled', 'disabled');
-            });
+             $('#message').slideUp(300, function () {
+             $('#message').hide();
+             $('#submit')
+             .after('<img src="public/images/loader.gif" class="loader">')
+             .attr('disabled', 'disabled');
+             });
 
-            jQuery.ajax({
-                type: "POST",
-                url: action,
-                dataType: 'json',
-                cache: false,
-                data: $('#contactform').serialize(),
-                success: function (data) {
+             jQuery.ajax({
+             type: "POST",
+             url: action,
+             dataType: 'json',
+             cache: false,
+             data: $('#contactform').serialize(),
+             success: function (data) {
 
-                    $('#message').text(data.msg).slideDown(300);
-                    $('#contactform img.loader').fadeOut(300, function () {
-                        $(this).remove();
-                    });
-                    $('#submit').removeAttr('disabled');
+             $('#message').text(data.msg).slideDown(300);
+             $('#contactform img.loader').fadeOut(300, function () {
+             $(this).remove();
+             });
+             $('#submit').removeAttr('disabled');
 
-                    if (data.info !== 'error') {
-                        $('#contactform').slideUp(300);
-                    } else {
-                        $('#contactform').slideUp(300);
-                    }
-                }
-            });
+             if (data.info !== 'error') {
+             $('#contactform').slideUp(300);
+             } else {
+             $('#contactform').slideUp(300);
+             }
+             }
+             });
+             */
         });
 
     });

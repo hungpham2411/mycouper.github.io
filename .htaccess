@@ -1,0 +1,19 @@
+RewriteEngine On
+
+RewriteBase /website-demo/oracle-anh-quang/
+
+Options +FollowSymlinks
+
+ErrorDocument 400 /404.html
+ErrorDocument 401 /404.html
+ErrorDocument 403 /404.html
+ErrorDocument 404 /404.html
+ErrorDocument 500 /404.html
+
+DirectoryIndex dieuhuong.php?trang=trangchu&flag=1 dieuhuong.php?trang=trangchu&flag=1
+
+RewriteRule ^blog-([a-zA-Z0-9-]+)-([0-9]+)\.html$ dieuhuong.php?trang=blog-detail&flag=3&urlBlog=$1&idBlog=$2 [QSA,L]
+RewriteRule ^blog-by-([a-zA-Z0-9-]+)([0-9]+)\.html$ dieuhuong.php?trang=blog&flag=2&flagg=3&filter=$1&id_filter=$2 [QSA,L]
+RewriteRule ^blog\.html$ dieuhuong.php?trang=blog&flag=2&flagg=1 [QSA,L]
+RewriteRule ^blog([0-9]+)([0-9]+)\.html$ dieuhuong.php?trang=blog&flag=2&flagg=1&start=$1&pages=$2 [QSA,L]
+RewriteRule ^blog-([a-zA-Z0-9-]+)\.html$ dieuhuong.php?trang=blog&flag=2&flagg=2&tags=$1 [QSA,L]
