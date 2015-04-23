@@ -193,6 +193,15 @@
                 return false;
             }
 
+			//address
+            var address = $("#address").val();
+            if (address == "") {
+
+                $('#message').text("Address required.").slideDown(300);
+                $("#address").focus();
+                return false;
+            }
+			
             //email (check if entered anything)
             var email = $("#email").val();
             //email (check if entered anything)
@@ -212,6 +221,26 @@
                 }
             }
 
+			//phone
+			var phone = $("#phone").val();
+			var phoneValid = /^[0-9 +]+$/;
+			var testPhone = phoneValid.test(phone);
+			if(testPhone == false){
+				
+                $('#message').text("Phone is not valid.").slideDown(300);
+                $("#phone").focus();
+                return false;
+			}
+			
+			//title
+            var title = $("#title").val();
+            if (title == "") {
+
+                $('#message').text("Title required.").slideDown(300);
+                $("#title").focus();
+                return false;
+            }
+			
             // comments
             var comments = $("#comments").val();
 
@@ -227,7 +256,7 @@
             $('#message').slideUp(300, function () {
                 $('#message').hide();
                 $('#submit')
-                        .after('<img src="templates/momentum/images/loader.gif" class="loader">')
+                        .after('<img src="public/images/loader.gif" class="loader">')
                         .attr('disabled', 'disabled');
             });
 
@@ -241,7 +270,7 @@
 
                     $('#message').text(data.msg).slideDown(300);
                     $('#contactform img.loader').fadeOut(300, function () {
-                        $(this).remove()
+                        $(this).remove();
                     });
                     $('#submit').removeAttr('disabled');
 

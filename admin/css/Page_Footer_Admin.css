@@ -1,0 +1,17 @@
+﻿body {
+    margin:0;
+    padding:0;
+}
+.Page_Footer
+{
+    display:block;
+    clear:left;
+    margin:0 auto;
+    padding-top:8px;
+    height:30px;
+    width:100%;
+    background:#000000;
+    color: #0095cc;
+    font-size: 16px;
+    text-decoration: none;
+}

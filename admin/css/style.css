@@ -1,0 +1,30 @@
+.flex-center {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.gm-btn {
+    background: #E5DFDC;
+    border: solid 1px rgba(0, 0, 0, 0.05);
+    color: black;
+    display: inline-block;
+    margin: 0 15px 0 0;
+    padding: 5px 20px;
+    text-decoration: none;
+}
+
+.gm-btn:hover {
+    background: #F1EDEB;
+    text-decoration: none;
+}
+
+.gm-taskbar {
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    padding: 10px 20px;
+}
+
+.mgt {
+    margin-top: 20px;
+}

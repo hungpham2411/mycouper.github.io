@@ -1,0 +1,14 @@
+﻿body {
+    margin:0;
+    padding:0;
+}
+.Page_Head_Admin
+ {
+    display:block;
+    margin:0;
+    padding:0;
+    width:100%;
+    height:101px;
+    background-color:#ff6a00;
+    /*background:url(../../../Images/Banner/banner.jpg) no-repeat;*/
+}
