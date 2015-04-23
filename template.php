@@ -14,9 +14,6 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
     $meta_description = $blog_details['bl_MetaDescription'];
     $meta_keywords = $blog_details['bl_MetaKeywords'];
 }
-if ($_POST["contactform"]) {
-    echo 'form is submit!';
-}
 ?>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="en-gb">
