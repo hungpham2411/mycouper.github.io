@@ -1351,10 +1351,6 @@ a.arrow-link:hover:before {
     padding-bottom: 35px;
 }
 
-.service-item .description {
-    height: 120px;
-}
-
 .service-item .subline {
     font-style: normal;
     font-size: 13px;
