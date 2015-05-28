@@ -21,7 +21,7 @@
             <!-- Leading items -->
 
 				<?php
-                    $record = 6;
+                    $record = 5;
                     if (isset($_GET['pages']) && (int) $_GET['pages']) {
                         $totalPages = $_GET['pages'];
                     } else {
@@ -226,7 +226,7 @@
         <!-- Right Sidebar -->
         <div class="four col">
             <div class="sidebar">
-                <div class="widget widget_banner"><div class="bannerwidget"><a title="Blog Banner" href="<?php echo PATH."/blog.html"; ?>"><img title="Blog Banner" src="<?php echo PATH ?>/public/images/blog/blog-banner.jpg" alt="Blog Banner"></a></div>
+                <div class="widget widget_banner"><div class="bannerwidget"><a title="Blog Banner" href="<?php echo PATH."/blog.html"; ?>"><img title="Blog Banner" src="<?php echo PATH ?>/public/images/blog/<?php echo $blog_banner['ss_Picture'] ?>" alt="Blog Banner"></a></div>
                 </div><div class="widget widget_search">
                     <form method="post" action="" autocomplete="off">
                         <input class="search" placeholder="Tìm kiếm..." name="searchword" type="text">

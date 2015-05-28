@@ -1,5 +1,6 @@
 <?php
 require_once("libraries/queries.php");
+include_once 'libraries/DatabaseBusiness.php';
 
 if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
     $meta_title = $options['op_MetaTitle'];
@@ -62,6 +63,7 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
         <script src="<?php echo PATH ?>/public/scripts/core.js" type="text/javascript"></script>
         <script src="<?php echo PATH ?>/public/libs/k2/k2.js" type="text/javascript"></script>
         <script src="<?php echo PATH ?>/public/libs/modernizr/modernizr.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
         <!--[if lt IE 9]>
                 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -99,44 +101,14 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
                         <input type="checkbox" id="toggle" />
                         <label for="toggle" class="toggle"></label>
 
+                        <?php
+                        include_once 'libraries/Menu.php';
+                        ?>
                         <nav class="menu ">
-                            <ul>
-                                <li class="item-191 active deeper parent">
-                                    <a class="scrollto" href="#" title="myCouper">myCouper</a>
-                                    <ul>
-                                        <!--
-                                        <li class="item-198 active deeper parent">
-                                            <a class="scrollto" href="#top" >Home examples</a>
-                                            <ul>
-                                                <li class="item-199 current active"><a href="#" >Static header</a></li>
-                                                <li class="item-200"><a href="#" >Background slider</a></li>
-                                                <li class="item-201"><a href="#" >Content slider</a></li>
-                                                <li class="item-202"><a href="#" >Multi slider</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="item-203"><a href="#" >Default version</a></li>
-                                        <li class="item-204"><a href="#" >Personal version</a></li>
-                                        <li class="item-205"><a href="#" >Alternative version</a></li>
-                                        -->
-
-                                        <li><a href="#" title="Thẻ thành viên">Thẻ thành viên</a></li>
-                                        <li><a href="#" title="Thẻ tích điểm">Thẻ tích điểm</a></li>
-                                        <li><a href="#" title="Phiếu điện tử">Phiếu điện tử</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item-192 active deeper parent">
-                                    <a href="#" title="Khách hàng">Khách hàng</a>
-                                    <ul>
-                                        <li><a href="#" title="Người dùng">Người dùng</a></li>
-                                        <li><a href="#" title="Doanh nghiệp">Doanh nghiệp</a></li>
-                                    </ul>
-                                </li>
-                                <li class="item-196"><a href="<?php echo PATH . "/blog.html"; ?>" title="Blog">Blog</a></li>
-                                <li class="item-197"><a class="scrollto" href="#contact" title="Liên hệ">Liên hệ</a></li>
-                                <li class="item-211"><a href="#" title="Đăng ký">Đăng ký</a></li>
-                                <li class="item-211"><a href="#" title="Đăng nhập">Đăng nhập</a></li>
-                                <li class="item-211"><a href="#" title="VN/EN">VN/EN</a></li>
-                            </ul>
+                            <?php
+                            $menu = new Menu();
+                            $menu->multiLevelMenu(0);
+                            ?>
                         </nav>
 
 
@@ -163,27 +135,32 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
                     <!-- Succes message after sending the form, see also the php file around line 90 -->
                     <div id="message" class="c-message"></div>
                     <!-- Form -->
-                    <form method="post" action="" enctype="multipart/form-data" name="contactform" id="contactform" class="form c-form">
+                    <form id="contactform" class="form c-form" method="post" action="contact_send_action.php" enctype="multipart/form-data" name="contactform">
                         <fieldset>
-                            <input name="name" type="text" id="name" placeholder="Họ và tên" />
-                            <input name="address" type="text" id="address" placeholder="Địa chỉ" />
+                            <input name="name" type="text" id="name" placeholder="Full name" value="<?php
+                            if (isset($_POST["name"])) {
+                                echo $_POST["name"];
+                            }
+                            ?>"/>
+                            <input name="address" type="text" id="address" placeholder="Address" />
                             <input name="email" type="email" id="email" placeholder="E-mail" />
-                            <input name="phone" type="tel" id="phone" placeholder="Điện thoại">
-                            <input name="title" type="text" id="title" placeholder="Tiêu đề">
-                            <textarea name="message" id="message" placeholder="Nội dung"></textarea>
+                            <input name="phone" type="tel" id="phone" placeholder="Phone">
+                            <input name="title" type="text" id="title" placeholder="Title">
+                            <textarea name="message" id="message" placeholder="Content"></textarea>
                             <div style="clear:both;"></div>
-                            <div id="dynamic_recaptcha_1"></div>
-                            <div style="clear:both;margin-bottom: 10px;"></div>
-                            <input type="hidden" name="option" value="com_cthcontact">
-                            <input type="hidden" name="task" value="contact.sendemail">
-                            <input type="hidden" name="tmpl" value="component">
-                            <!--	index.php?option=com_cthcontact&amp;task=contact.sendemail&amp;tmpl=component -->
-                            <input type="hidden" name="receiveEmail" value="<?php echo $options['op_Email'] ?>">
-                            <input type="hidden" name="thanks" value="Thanks for contacting with us!">
-                            <input type="hidden" name="subject" value="Get support">
-                            <input type="hidden" name="960f7535ebc239e7e1f97eac42f80b6c" value="1" />
+                            <div class="g-recaptcha" data-sitekey="6Le0jgYTAAAAAMRRsvZCLnnGjEZ2MoOIoxLAIhcZ"></div>
+                            <!--<div id="dynamic_recaptcha_1"></div>
+                               <div style="clear:both;margin-bottom: 10px;"></div>
+                                                           <input type="hidden" name="option" value="com_cthcontact">
+                                                           <input type="hidden" name="task" value="contact.sendemail">
+                                                           <input type="hidden" name="tmpl" value="component">
+                                                           index.php?option=com_cthcontact&amp;task=contact.sendemail&amp;tmpl=component
+                                                           <input type="hidden" name="receiveEmail" value="<?php echo $options['op_Email'] ?>">
+                               <input type="hidden" name="thanks" value="Thanks for contacting with us!">
+                               <input type="hidden" name="subject" value="Get support">
+                               <input type="hidden" name="960f7535ebc239e7e1f97eac42f80b6c" value="1" />	 -->
 
-                            <input type="submit" class="submit btn outline" id="submit" value="Gửi liên hệ" />
+                            <input type="submit" class="submit btn outline" name="submit" id="submit" value="Send" />
                         </fieldset>
                     </form>
                 </div>
@@ -192,11 +169,11 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
                 <!-- Contact details -->
                 <div class="four col text-left">
 
-                    <h5>Hãy liên hệ với chúng tôi</h5>
-                    <p>Bạn muốn hợp tác, hỏi, phản hồi, góp ý, bình luận về ứng dụng, dịch vụ của chúng tôi ?<br/>Vui lòng gửi thông tin cho chúng tôi</p>
+                    <h5><?php echo $options['title_1']; ?></h5>
+                    <p><?php echo $options['content_1']; ?></p>
 
 
-                    <h5>Chi tiết liên hệ</h5>
+                    <h5><?php echo $options['title_2']; ?></h5>
                     <address class="c-details">
                         <a href="<?php echo PATH ?>" title="<?php echo $options['op_Name'] ?>">
                             <i class="fa fa-home"></i>
@@ -244,19 +221,10 @@ if (isset($_GET['flag']) && ($_GET['flag'] == 1 || $_GET['flag'] == 2)) {
 
         <footer class="cth-footer footer"><div class="row " ><div class="twelve col">
 
-                    <p>Copyright &copy; 2015 - <i class="fa fa-coffee"></i> <a href="<?php echo PATH ?>" title="<?php echo $options['op_MetaTitle'] ?>">myCouper</a> - All rights reserved</p>
+                    <p>Copyright @ 2015 - <a href="<?php echo PATH ?>" title="<?php echo $options['op_MetaTitle'] ?>">myCouper</a> - All rights reserved</p>
 
                 </div></div>
         </footer>
-
-
-
-
-
-
-
-
-
 
         <!-- Javascript -->
         <script src="<?php echo PATH ?>/public/scripts/main.js"></script>

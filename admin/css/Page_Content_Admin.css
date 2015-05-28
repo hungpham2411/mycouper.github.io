@@ -13,12 +13,13 @@
 }
 .Content_Admin_Left
 {
+    height: auto;
+
     display:block;
     float:left;
     margin:0;
     padding:0;
     width:19%;
-    height:auto;
     background-color:#ff6a00;
 }
 .Content_Admin_Right

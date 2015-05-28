@@ -30,6 +30,7 @@ include_once('../libraries/configs.php');
         <script src="../ckeditor/ckeditor.js" type="text/javascript"></script>
         <script src="../ckfinder/ckfinder.js" type="text/javascript"></script>
         <script src="js/string_optimization.js"></script>
+        <script src="js/script.js"></script>
 
         <script>
 
@@ -66,7 +67,7 @@ include_once('../libraries/configs.php');
             <img src="images/banner.png" alt="" width="100%"  height="100"/>
         </div>
         <div class="Page_Content_Admin">
-            <div class="Content_Admin_Left">
+            <aside class="Content_Admin_Left">
                 <ul class="accordion_menu">
                     <li class="menu-item">
                         <a class="menu-item-link" href="#">Xin Chào :
@@ -88,7 +89,7 @@ include_once('../libraries/configs.php');
                     </li>
                     <?php if ($_SESSION['position'] == "2"): ?>
 
-                        <li class="menu-item"><a class="menu-item-link" href="#">I. Quản lý quản trị viên</a>
+                        <li class="menu-item"><a class="menu-item-link" href="#">Quản lý quản trị viên</a>
                             <ul class="sub-menu">
                                 <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=staff"><em>01</em>Danh sách quản trị viên</a></li>
                                 <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=add_staff"><em>02</em>Thêm quản trị viên mới</a></li>
@@ -96,39 +97,53 @@ include_once('../libraries/configs.php');
                         </li>
 
                     <?php endif; ?>
-                    <li class="menu-item"><a class="menu-item-link" href="#">II. Tiêu đề và Dịch vụ</a>
+
+                    <li class="menu-item">
+                        <a class="menu-item-link" href="#">Menu</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=menu"><em>01</em>Menu list</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item"><a class="menu-item-link" href="#">Tiêu đề</a>
                         <ul class="sub-menu">
                             <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=categories"><em>01</em>Tiêu đề</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=add_category"><em>02</em>Dịch vụ</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a class="menu-item-link" href="#">III. Blog</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=blog_categories"><em>01</em>Danh mục</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=blog"><em>02</em>Bài viết</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=tags"><em>03</em>Tags</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a class="menu-item-link" href="#">IV. Nhân vật quan trọng</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=vip"><em>01</em>Danh sách</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item"><a class="menu-item-link" href="#">V. Khác</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=options"><em>01</em>Thông tin chung</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=edit_slideshow"><em>02</em>Banner trang chủ</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=edit_banner_blog"><em>03</em>Banner trang Blog</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=about_us"><em>04</em>Về chúng tôi</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=partners"><em>05</em>Các đối tác</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=feedback"><em>06</em>Các nhận xét</a></li>
-                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=comments"><em>07</em>Liện hệ</a></li>
                         </ul>
                     </li>
 
+                    <li class="menu-item">
+                        <a class="menu-item-link" href="#">Content section</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=edit_slideshow">Home</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=photo_section">Photo</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=video_section">Video</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=support_section">People</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=service_section">Merchants</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=partners">Partner</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item">
+                        <a class="menu-item-link" href="#">About and contact section</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=about_us">About intro</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=feedback">About quote</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=vip">About employee</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=options">Contact</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="menu-item"><a class="menu-item-link" href="#">Blog</a>
+                        <ul class="sub-menu">
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=blog_categories">Danh mục</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=blog">Bài viết</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=tags">Tags</a></li>
+                            <li class="menu-item"><a class="menu-item-link" href="quanly.php?page=edit_banner_blog">Banner</a></li>
+                        </ul>
+                    </li>
                 </ul>
 
-            </div>
+            </aside>
             <div class="Content_Admin_Right">
                 <?php
                 foreach ($noidungtrang as $noidung) {
@@ -139,8 +154,9 @@ include_once('../libraries/configs.php');
 
 
         </div>
-        <div class="Page_Footer">
-            <center> <a>Copyright ® 2014 bdschinhchu.vn Software Company. All Rights Reserved. </a></center>
-        </div>
+
+        <footer class="Page_Footer">
+            <p>Copyright ® 2015 TCN24H Software Company. All Rights Reserved.</p>
+        </footer>
     </body>
 </html>

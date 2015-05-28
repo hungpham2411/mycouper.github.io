@@ -1,13 +1,13 @@
 /*
 
-	Base.css
-	
-	01. Reset
-	02. Other basic parts
-	03. Forms
-	04. Media
-	05. Grid
-	06. Positioning and spacing
+        Base.css
+
+        01. Reset
+        02. Other basic parts
+        03. Forms
+        04. Media
+        05. Grid
+        06. Positioning and spacing
 
 */
 
@@ -26,13 +26,13 @@ html, button, input, select, textarea { font-family: inherit; }
 
 .form textarea,
 .form-aligned textarea {
-	vertical-align: top;
+    vertical-align: top;
 }
 /* === 02. Other basic parts === */
 abbr[title],
 abbr[data-original-title] {
-cursor: help;
-border-bottom: 1px dotted #999999;
+    cursor: help;
+    border-bottom: 1px dotted #999999;
 }
 
 address { margin-bottom: 25px }
@@ -44,46 +44,46 @@ sub { bottom: -0.25em }
 var { font-style: italic }
 
 mark {
-background: yellow;
-color: #000000;
+    background: yellow;
+    color: #000000;
 }
 
 sub,
 sup {
-font-size: 75%;
-line-height: 0;
-position: relative;
-vertical-align: baseline;
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
 }
 
 pre,
 code,
 kbd,
 samp {
-font-family: monospace, serif;
-_font-family: 'courier new', monospace;
-font-size: 13px;
-line-height: 20px;
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 13px;
+    line-height: 20px;
 }
 
 pre {
-white-space: pre-wrap;
-white-space: -moz-pre-wrap;
-white-space: -pre-wrap;
-white-space: -o-pre-wrap;
-word-wrap: break-word;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 .code {
-background: #fafafa;
-border: 1px solid #eee;
-padding: 0 20px 20px 20px;
-margin-top: 25px;
-margin-bottom: 25px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    padding: 0 20px 20px 20px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .code span {
-color: tomato;
+    color: tomato;
 }
 
 
@@ -110,22 +110,22 @@ color: tomato;
 .form input[type="color"],
 .form select,
 .form textarea {
--webkit-appearance: none;
-display: inline-block;
-width: 100%;
-min-height: 50px;
-padding: 10px;
-border: 2px solid #f4f4f4;
-background: #f4f4f4;
-margin-bottom: 10px;
--webkit-box-sizing: border-box;
-   -moz-box-sizing: border-box;
-		box-sizing: border-box;
--webkit-transition: all .2s ease-in-out;
-   -moz-transition: all .2s ease-in-out;
-	-ms-transition: all .2s ease-in-out;
-	 -o-transition: all .2s ease-in-out;
-		transition: all .2s ease-in-out;
+    -webkit-appearance: none;
+    display: inline-block;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px;
+    border: 2px solid #f4f4f4;
+    background: #f4f4f4;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -ms-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .form input:not([type]):focus,
@@ -145,32 +145,32 @@ margin-bottom: 10px;
 .form input[type="color"]:focus,
 .form select:focus,
 .form textarea:focus {
-outline: 0;
-outline: thin dotted \9; /* IE6-9 */
-color: #111111;
-border: 2px solid #111111;
--webkit-transition: all .2s;
-   -moz-transition: all .2s;
-	-ms-transition: all .2s;
-	 -o-transition: all .2s;
-		transition: all .2s;
+    outline: 0;
+    outline: thin dotted \9; /* IE6-9 */
+    color: #111111;
+    border: 2px solid #111111;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
 }
 
 .form input[type="file"]:focus,
 .form input[type="radio"]:focus,
 .form input[type="checkbox"]:focus {
-outline: thin dotted #111111;
-outline: 1px auto #111111;
+    outline: thin dotted #111111;
+    outline: 1px auto #111111;
 }
 
 .form select {
-min-width: 75px;
+    min-width: 75px;
 }
 
 .form .form-checkbox,
 .form .form-radio {
-margin: 1em 0;
-display: block;
+    margin: 1em 0;
+    display: block;
 }
 
 .form input:not([type])[disabled],
@@ -190,72 +190,72 @@ display: block;
 .form input[type="color"][disabled],
 .form select[disabled],
 .form textarea[disabled] {
-cursor: not-allowed;
-background-color: #eaeded;
-color: #cad2d3;
+    cursor: not-allowed;
+    background-color: #eaeded;
+    color: #cad2d3;
 }
 
 .form input[readonly],
 .form select[readonly],
 .form textarea[readonly] {
-background: #eee;
-color: #777;
-border-color: #ccc;
+    background: #eee;
+    color: #777;
+    border-color: #ccc;
 }
 
 .form input:focus:invalid,
 .form textarea:focus:invalid,
 .form select:focus:invalid {
-color: #b94a48;
-border: 1px solid #ee5f5b;
+    color: #b94a48;
+    border: 1px solid #ee5f5b;
 }
 
 .form input:focus:invalid:focus,
 .form textarea:focus:invalid:focus,
 .form select:focus:invalid:focus {
-border-color: #e9322d;
+    border-color: #e9322d;
 }
 
 .form input[type="file"]:focus:invalid:focus,
 .form input[type="radio"]:focus:invalid:focus,
 .form input[type="checkbox"]:focus:invalid:focus {
-outline-color: #e9322d;
+    outline-color: #e9322d;
 }
 
 .form textarea {
-resize: none;
-height: 150px;
-font-size: 100%;
+    resize: none;
+    height: 150px;
+    font-size: 100%;
 }
 
 .form select {
-border: 1px solid #ccc;
-background-color: white;
+    border: 1px solid #ccc;
+    background-color: white;
 }
 
 .form select[multiple] {
-height: auto;
+    height: auto;
 }
 
 .form label {
-margin: 0.5em 0 0.2em;
-font-size: 100%;
+    margin: 0.5em 0 0.2em;
+    font-size: 100%;
 }
 
 .form fieldset {
-margin: 0;
-padding: 0.35em 0 0.75em;
-border: 0;
+    margin: 0;
+    padding: 0.35em 0 0.75em;
+    border: 0;
 }
 
 .form legend {
-display: block;
-width: 100%;
-padding: 10px 0;
-margin-bottom: 10px;
-font-size: 125%;
-color: #111111;
-border-bottom: 1px solid #eeeeee;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-bottom: 10px;
+    font-size: 125%;
+    color: #111111;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .form-aligned input,
@@ -263,37 +263,37 @@ border-bottom: 1px solid #eeeeee;
 .form-aligned select,
 .form-aligned .form-help-inline,
 .form-message-inline {
-display: inline-block;
-*display: inline;
-*zoom: 1;
-vertical-align: middle;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
 }
 
 .form-aligned textarea {
-vertical-align: top;
+    vertical-align: top;
 }
 
 .form-aligned .form-control-group {
-margin-bottom: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .form-aligned .form-control-group label {
-text-align: right;
-display: inline-block;
-vertical-align: middle;
-width: 10em;
-margin: 0 1em 0 0;
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    width: 10em;
+    margin: 0 1em 0 0;
 }
 
 .form-aligned .form-controls {
-margin: 1.5em 0 0 10em;
+    margin: 1.5em 0 0 10em;
 }
 
 
 /* === 04. Media === */
 video {
-max-width: 100%;
-height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
 iframe,
@@ -301,9 +301,9 @@ embed,
 object { max-width: 100% }
 
 .vendor {
-padding: 0;
-background: #fafafa;
-margin-bottom: 0;
+    padding: 0;
+    background: #fafafa;
+    margin-bottom: 0;
 }
 
 .unsupported { background: #fafafa }
@@ -311,15 +311,15 @@ margin-bottom: 0;
 img { vertical-align: bottom }
 
 .responsive-img {
-max-width: 100%;
-height: auto;
-vertical-align: bottom;
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
 }
 
 .circle-img {
--webkit-border-radius: 50%;
-	-ms-border-radius: 50%;
-		border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
 }
 
 
@@ -384,29 +384,29 @@ vertical-align: bottom;
 /* Tablet landscape - Large */
 @media only screen and (max-width: 1024px) {
 
-/* Grid parts - 30px gutter */
-.row .row { margin: 0 -15px; }
-.col { padding: 0 15px; }
+    /* Grid parts - 30px gutter */
+    .row .row { margin: 0 -15px; }
+    .col { padding: 0 15px; }
 
-/* Margin grid */
-.grid-m { margin: 15px; }
-.grid-ms { margin-left: 15px; margin-right: 15px; }
-.grid-mt { margin-top: 30px; }
-.grid-mb { margin-bottom: 30px; }
+    /* Margin grid */
+    .grid-m { margin: 15px; }
+    .grid-ms { margin-left: 15px; margin-right: 15px; }
+    .grid-mt { margin-top: 30px; }
+    .grid-mb { margin-bottom: 30px; }
 
-/* Large grid */
-.row .large-one { width: 8.3333% }
-.row .large-two { width: 16.6666% }
-.row .large-three { width: 25% }
-.row .large-four { width: 33.3333% }
-.row .large-five { width: 41.6666% }
-.row .large-six { width: 50% }
-.row .large-seven { width: 58.3333% }
-.row .large-eight { width: 66.6666% }
-.row .large-nine { width: 75% }
-.row .large-ten { width: 83.3333% }
-.row .large-eleven { width: 91.6666% }
-.row .large-twelve { width: 100% }
+    /* Large grid */
+    .row .large-one { width: 8.3333% }
+    .row .large-two { width: 16.6666% }
+    .row .large-three { width: 25% }
+    .row .large-four { width: 33.3333% }
+    .row .large-five { width: 41.6666% }
+    .row .large-six { width: 50% }
+    .row .large-seven { width: 58.3333% }
+    .row .large-eight { width: 66.6666% }
+    .row .large-nine { width: 75% }
+    .row .large-ten { width: 83.3333% }
+    .row .large-eleven { width: 91.6666% }
+    .row .large-twelve { width: 100% }
 
 }
 
@@ -414,59 +414,59 @@ vertical-align: bottom;
 /* Tablet portrait - Medium */
 @media only screen and (max-width: 768px) {
 
-/* Basic grid - Collapsing all to one 100% width column here */
-.row .one,
-.row .two,
-.row .three,
-.row .four,
-.row .five,
-.row .six,
-.row .seven,
-.row .eight,
-.row .nine,
-.row .ten,
-.row .eleven,
-.row .twelve { width: 100% }
+    /* Basic grid - Collapsing all to one 100% width column here */
+    .row .one,
+    .row .two,
+    .row .three,
+    .row .four,
+    .row .five,
+    .row .six,
+    .row .seven,
+    .row .eight,
+    .row .nine,
+    .row .ten,
+    .row .eleven,
+    .row .twelve { width: 100% }
 
-/* Offset grid - Since every col is collapsing we don't use the offsets anymore */
-.offset-by-one,
-.offset-by-two,
-.offset-by-three,
-.offset-by-four,
-.offset-by-five,
-.offset-by-six,
-.offset-by-seven,
-.offset-by-eight,
-.offset-by-nine,
-.offset-by-ten,
-.offset-by-eleven { margin-left: 0 }
+    /* Offset grid - Since every col is collapsing we don't use the offsets anymore */
+    .offset-by-one,
+    .offset-by-two,
+    .offset-by-three,
+    .offset-by-four,
+    .offset-by-five,
+    .offset-by-six,
+    .offset-by-seven,
+    .offset-by-eight,
+    .offset-by-nine,
+    .offset-by-ten,
+    .offset-by-eleven { margin-left: 0 }
 
-/* Center grid - Since every col is collapsing we don't use the offsets anymore */
-.one.center,
-.two.center,
-.three.center,
-.four.center,
-.five.center,
-.six.center,
-.seven.center,
-.eight.center,
-.nine.center,
-.ten.center,
-.eleven.center { margin-left: 0 }
+    /* Center grid - Since every col is collapsing we don't use the offsets anymore */
+    .one.center,
+    .two.center,
+    .three.center,
+    .four.center,
+    .five.center,
+    .six.center,
+    .seven.center,
+    .eight.center,
+    .nine.center,
+    .ten.center,
+    .eleven.center { margin-left: 0 }
 
-/* Medium grid */
-.row .medium-one { width: 8.3333% }
-.row .medium-two { width: 16.6666% }
-.row .medium-three { width: 25% }
-.row .medium-four { width: 33.3333% }
-.row .medium-five { width: 41.6666% }
-.row .medium-six { width: 50% }
-.row .medium-seven { width: 58.3333% }
-.row .medium-eight { width: 66.6666% }
-.row .medium-nine { width: 75% }
-.row .medium-ten { width: 83.3333% }
-.row .medium-eleven { width: 91.6666% }
-.row .medium-twelve { width: 100% }
+    /* Medium grid */
+    .row .medium-one { width: 8.3333% }
+    .row .medium-two { width: 16.6666% }
+    .row .medium-three { width: 25% }
+    .row .medium-four { width: 33.3333% }
+    .row .medium-five { width: 41.6666% }
+    .row .medium-six { width: 50% }
+    .row .medium-seven { width: 58.3333% }
+    .row .medium-eight { width: 66.6666% }
+    .row .medium-nine { width: 75% }
+    .row .medium-ten { width: 83.3333% }
+    .row .medium-eleven { width: 91.6666% }
+    .row .medium-twelve { width: 100% }
 
 }
 
@@ -474,29 +474,29 @@ vertical-align: bottom;
 /* Smartphone landscape - Small */
 @media only screen and (max-width: 480px) {
 
-/* Grid parts - 20px gutter */
-.row .row { margin: 0 -10px; }
-.col { padding: 0 10px; }
+    /* Grid parts - 20px gutter */
+    .row .row { margin: 0 -10px; }
+    .col { padding: 0 10px; }
 
-/* Margin grid */
-.grid-m { margin: 10px; }
-.grid-ms { margin-left: 10px; margin-right: 10px; }
-.grid-mt { margin-top: 20px; }
-.grid-mb { margin-bottom: 20px; }
+    /* Margin grid */
+    .grid-m { margin: 10px; }
+    .grid-ms { margin-left: 10px; margin-right: 10px; }
+    .grid-mt { margin-top: 20px; }
+    .grid-mb { margin-bottom: 20px; }
 
-/* Small grid */
-.row .small-one { width: 8.3333% }
-.row .small-two { width: 16.6666% }
-.row .small-three { width: 25% }
-.row .small-four { width: 33.3333% }
-.row .small-five { width: 41.6666% }
-.row .small-six { width: 50% }
-.row .small-seven { width: 58.3333% }
-.row .small-eight { width: 66.6666% }
-.row .small-nine { width: 75% }
-.row .small-ten { width: 83.3333% }
-.row .small-eleven { width: 91.6666% }
-.row .small-twelve { width: 100% }
+    /* Small grid */
+    .row .small-one { width: 8.3333% }
+    .row .small-two { width: 16.6666% }
+    .row .small-three { width: 25% }
+    .row .small-four { width: 33.3333% }
+    .row .small-five { width: 41.6666% }
+    .row .small-six { width: 50% }
+    .row .small-seven { width: 58.3333% }
+    .row .small-eight { width: 66.6666% }
+    .row .small-nine { width: 75% }
+    .row .small-ten { width: 83.3333% }
+    .row .small-eleven { width: 91.6666% }
+    .row .small-twelve { width: 100% }
 
 }
 
@@ -504,62 +504,62 @@ vertical-align: bottom;
 /* Smartphone portrait - X-small */
 @media only screen and (max-width: 320px) {
 
-/* X-small grid */
-.row .x-small-one { width: 8.3333% }
-.row .x-small-two { width: 16.6666% }
-.row .x-small-three { width: 25% }
-.row .x-small-four { width: 33.3333% }
-.row .x-small-five { width: 41.6666% }
-.row .x-small-six { width: 50% }
-.row .x-small-seven { width: 58.3333% }
-.row .x-small-eight { width: 66.6666% }
-.row .x-small-nine { width: 75% }
-.row .x-small-ten { width: 83.3333% }
-.row .x-small-eleven { width: 91.6666% }
-.row .x-small-twelve { width: 100% }
+    /* X-small grid */
+    .row .x-small-one { width: 8.3333% }
+    .row .x-small-two { width: 16.6666% }
+    .row .x-small-three { width: 25% }
+    .row .x-small-four { width: 33.3333% }
+    .row .x-small-five { width: 41.6666% }
+    .row .x-small-six { width: 50% }
+    .row .x-small-seven { width: 58.3333% }
+    .row .x-small-eight { width: 66.6666% }
+    .row .x-small-nine { width: 75% }
+    .row .x-small-ten { width: 83.3333% }
+    .row .x-small-eleven { width: 91.6666% }
+    .row .x-small-twelve { width: 100% }
 
 }
 
 
 /* Responsive utilities */
 @media only screen and (min-width: 1025px) {
-.hide-normal { display: none!important }
-.hide-large,
-.hide-medium,
-.hide-small,
-.hide-x-small { display: block!important }
+    .hide-normal { display: none!important }
+    .hide-large,
+    .hide-medium,
+    .hide-small,
+    .hide-x-small { display: block!important }
 }
 
 @media only screen and (max-width: 1024px) {
-.hide-large { display: none!important }
-.hide-normal,
-.hide-medium,
-.hide-small,
-.hide-x-small { display: block!important }
+    .hide-large { display: none!important }
+    .hide-normal,
+    .hide-medium,
+    .hide-small,
+    .hide-x-small { display: block!important }
 }
 
 @media only screen and (max-width: 768px) {
-.hide-medium { display: none!important }
-.hide-normal,
-.hide-large,
-.hide-small,
-.hide-x-small { display: block!important }
+    .hide-medium { display: none!important }
+    .hide-normal,
+    .hide-large,
+    .hide-small,
+    .hide-x-small { display: block!important }
 }
 
 @media only screen and (max-width: 480px) {
-.hide-small { display: none!important }
-.hide-normal,
-.hide-large,
-.hide-medium,
-.hide-x-small { display: block!important }
+    .hide-small { display: none!important }
+    .hide-normal,
+    .hide-large,
+    .hide-medium,
+    .hide-x-small { display: block!important }
 }
 
 @media only screen and (max-width: 320px) {
-.hide-x-small { display: none!important }
-.hide-normal,
-.hide-large,
-.hide-medium,
-.hide-small { display: block!important }
+    .hide-x-small { display: none!important }
+    .hide-normal,
+    .hide-large,
+    .hide-medium,
+    .hide-small { display: block!important }
 }
 
 
